@@ -59,8 +59,7 @@ if ($request.url.includes("firebaseremoteconfig")) {
             obj.subscriber.entitlements[e] = locketGold
     } else {
         obj.subscriber.subscriptions["locket_1600_1y"] = duyvinh09, 
-        // Thay thế đoạn ".pro" cũ bằng cấu trúc gán nhãn mới này:
-        obj.subscriber.entitlements["gold_features"] = locketGold;
+        // Thay thế đoạn ".pro" cũ bằng cấu trúc gán nhãn mới này
         obj.subscriber.entitlements["Gold"] = locketGold;
     }
     $done({
