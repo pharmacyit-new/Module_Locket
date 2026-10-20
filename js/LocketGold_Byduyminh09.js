@@ -5,7 +5,7 @@ const mapping = {
 
 // ========= Thiết lập ngày tháng theo ý muốn ========= //
 // Bạn có thể sửa ngày đăng ký ở đây (Định dạng: Năm-Tháng-Ngày)
-const NGAY_DANG_KY = "2005-10-18T16:00:00Z"; 
+const NGAY_DANG_KY = "2007-05-01T16:00:00Z"; 
 const NGAY_HET_HAN = "9999-12-31T23:59:59Z"; // Cố định vĩnh viễn
 
 var ua = $request.headers["User-Agent"] || $request.headers["user-agent"] || "",
@@ -59,7 +59,8 @@ if ($request.url.includes("firebaseremoteconfig")) {
             obj.subscriber.entitlements[e] = locketGold
     } else {
         obj.subscriber.subscriptions["locket_1600_1y"] = duyvinh09, 
-        // Thay thế đoạn ".pro" cũ bằng cấu trúc gán nhãn mới này
+        // Thay thế đoạn ".pro" cũ bằng cấu trúc gán nhãn mới này:
+        obj.subscriber.entitlements["gold_features"] = locketGold;
         obj.subscriber.entitlements["Gold"] = locketGold;
     }
     $done({
